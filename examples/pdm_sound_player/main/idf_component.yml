@@ -1,0 +1,5 @@
+dependencies:
+  esp32_audio_player:
+    version: "*"
+    override_path: "../../../"
+  
