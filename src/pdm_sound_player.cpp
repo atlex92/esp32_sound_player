@@ -4,7 +4,7 @@
 #include "esp_log.h"
 
 #define DEFAULT_FREQ 48'000
-#define TX_CHUNK_LENGTH_MS 5
+#define TX_CHUNK_LENGTH_MS 50
 #define TX_CHUNK_LENGTH(FREQ) (TX_CHUNK_LENGTH_MS * FREQ / 1000)
 #define TX_CHUNK_LENGTH_IN_BYTES(FREQ) (TX_CHUNK_LENGTH_MS * FREQ / 1000) * (sizeof(int16_t))
 

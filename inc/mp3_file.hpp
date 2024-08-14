@@ -17,7 +17,6 @@ public:
 
     void reset() const {
         data_offset_ = 0;
-        curr_chunk_ = {};
     }
 private:
     static constexpr const char* const TAG{"Mp3File"};
@@ -27,4 +26,5 @@ private:
     mutable mp3dec_frame_info_t frame_info_{};
     mutable size_t data_offset_{};
     mutable SampleChunk curr_chunk_{};
+    mutable size_t data_size_{};
 };
