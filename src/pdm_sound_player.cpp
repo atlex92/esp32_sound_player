@@ -9,8 +9,6 @@
 #define TX_CHUNK_LENGTH_IN_BYTES(FREQ) (TX_CHUNK_LENGTH_MS * FREQ / 1000) * (sizeof(int16_t))
 
 PdmSoundPlayer::PdmSoundPlayer(const gpio_num_t clk_io, const gpio_num_t data_io) : clk_gpio_{clk_io}, dout_gpio_{data_io} {
-    ESP_ERROR_CHECK(gpio_reset_pin(clk_gpio_));
-    ESP_ERROR_CHECK(gpio_reset_pin(dout_gpio_));
     i2s_chan_config_t tx_chan_cfg = I2S_CHANNEL_DEFAULT_CONFIG(I2S_NUM_0, I2S_ROLE_MASTER);
     tx_chan_cfg.auto_clear = true;
     ESP_ERROR_CHECK(i2s_new_channel(&tx_chan_cfg, &tx_chan_handler_, NULL));
