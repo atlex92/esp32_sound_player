@@ -23,8 +23,8 @@ public:
         return ret;
     }
 
-    eSoundFiles soundFileType() const override {
-        return eSoundFiles::SOUND_FILE_WAV;
+    eSoundFileFormats soundFileType() const override {
+        return eSoundFileFormats::SOUND_FILE_WAV;
     }
 
     void reset() const override {

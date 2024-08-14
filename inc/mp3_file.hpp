@@ -9,8 +9,8 @@ class Mp3File : public SoundFile {
 public:
     Mp3File(const uint8_t* data, const size_t size);
 
-    eSoundFiles soundFileType() const override {
-        return eSoundFiles::SOUND_FILE_MP3;
+    eSoundFileFormats soundFileType() const override {
+        return eSoundFileFormats::SOUND_FILE_MP3;
     }
 
     SampleChunk nextSampleChunk() const override;
