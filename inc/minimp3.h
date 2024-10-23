@@ -1,5 +1,6 @@
 #ifndef MINIMP3_H
 #define MINIMP3_H
+// clang-format off
 /*
     https://github.com/lieff/minimp3
     To the extent possible under law, the author(s) have dedicated all copyright and related and neighboring rights to
@@ -1903,5 +1904,6 @@ void mp3dec_f32_to_s16(const float* in, int16_t* out, int num_samples) {
     }
   }
 }
+// clang-format on
 #endif /* MINIMP3_FLOAT_OUTPUT */
 #endif /* MINIMP3_IMPLEMENTATION && !_MINIMP3_IMPLEMENTATION_GUARD */
